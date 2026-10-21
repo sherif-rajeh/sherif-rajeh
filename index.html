@@ -632,11 +632,16 @@
       box-shadow: 0 14px 32px rgba(0,0,0,0.4);
     }
 
+  
     .lab-card img {
-      width: 100%; height: 195px;
-      object-fit: cover;
+      width: 100%;
+      height: 250px;
+      object-fit: contain;
+      object-position: center;
+      background: var(--bg-card);
       transition: transform 0.5s ease;
     }
+
 
     .lab-card:hover img { transform: scale(1.04); }
 
@@ -1371,7 +1376,6 @@
               <li>Scripted device login and command execution</li>
               <li>Executed Cisco IOS commands remotely</li>
               <li>Collected device information automatically</li>
-              <li>Integrated secure credential handling</li>
               <li>Used Netmiko & Telnetlib for VLAN, OSPF, and config backup tasks</li>
             </ul>
             <div class="tools-badge"><i class="bi bi-tools"></i> Python · Telnet · GNS3</div>
@@ -1385,51 +1389,197 @@
     </div>
   </div>
 </section>
-  <!-- ===================== LAB EXPERIENCE ===================== -->
-  <section id="lab" style="background: var(--bg-section);">
-    <div class="container">
-      <h2 class="section-title section-title-center">Hands-On <span>Lab</span> Experience</h2>
-      <p class="text-center mb-5" style="color:var(--text-muted);">
-        Practical experience with real networking equipment in enterprise training labs.
-      </p>
 
-      <div class="row g-4">
 
-        <div class="col-md-4 col-sm-6">
-          <div class="lab-card animate-on-scroll">
-            <img src="rack2.jpg" loading="lazy" alt="Cisco Switches and Routers Lab">
-            <div class="lab-card-body">
-              <h5 class="card-title">Cisco Switches, Routers & WLC</h5>
-              <p class="card-text">Hands-on VLAN setup, routing configuration, IP addressing, troubleshooting, and centralized wireless management.</p>
-            </div>
+
+<!-- ===================== LAB EXPERIENCE ===================== -->
+<section id="lab" style="background: var(--bg-section);">
+  <div class="container">
+
+    <h2 class="section-title section-title-center">
+      Hands-On <span>Lab</span> Experience
+    </h2>
+
+    <p class="text-center mb-5" style="color:var(--text-muted);">
+      Practical experience with real networking equipment,
+      technical workshops, and industrial training.
+    </p>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- ===================== CARD 1 ===================== -->
+      <!-- Cisco Switches, Routers & WLC -->
+      <div class="col-12 col-md-6">
+        <div class="lab-card animate-on-scroll">
+
+          <img src="rack2.jpg"
+               loading="lazy"
+               alt="Cisco Switches and Routers Lab">
+
+          <div class="lab-card-body">
+            <h5 class="card-title">
+              Cisco Switches, Routers & WLC
+            </h5>
+
+            <p class="card-text">
+              Hands-on VLAN setup, routing configuration,
+              IP addressing, troubleshooting, and
+              centralized wireless management.
+            </p>
           </div>
+
         </div>
-
-        <div class="col-md-4 col-sm-6">
-          <div class="lab-card animate-on-scroll">
-            <img src="ipphone.jpg" loading="lazy" alt="Cisco IP Phone 7942G">
-            <div class="lab-card-body">
-              <h5 class="card-title">Cisco IP Phone 7942G</h5>
-              <p class="card-text">VoIP setup including SIP-based communication and integration with FreePBX systems.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-6">
-          <div class="lab-card animate-on-scroll">
-            <img src="rack.jpg" loading="lazy" alt="Network Rack">
-            <div class="lab-card-body">
-              <h5 class="card-title">Network Rack Setup</h5>
-              <p class="card-text">Real lab rack with Cisco router, FortiGate firewall, and structured cabling environment.</p>
-            </div>
-          </div>
-        </div>
-
-        
-
       </div>
+
+      <!-- ===================== CARD 2 ===================== -->
+      <!-- Cisco IP Phone -->
+      <div class="col-12 col-md-6">
+        <div class="lab-card animate-on-scroll">
+
+          <img src="ipphone.jpg"
+               loading="lazy"
+               alt="Cisco IP Phone 7942G">
+
+          <div class="lab-card-body">
+            <h5 class="card-title">
+              Cisco IP Phone 7942G
+            </h5>
+
+            <p class="card-text">
+              VoIP setup including SIP-based communication
+              and integration with FreePBX systems.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ===================== CARD 3 ===================== -->
+      <!-- Network Rack Setup -->
+      <div class="col-12 col-md-6">
+        <div class="lab-card animate-on-scroll">
+
+          <img src="rack.jpg"
+               loading="lazy"
+               alt="Network Rack">
+
+          <div class="lab-card-body">
+            <h5 class="card-title">
+              Network Rack Setup
+            </h5>
+
+            <p class="card-text">
+              Real lab rack with Cisco router,
+              FortiGate firewall, and structured
+              cabling environment.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ===================== CARD 4 ===================== -->
+      <!-- Fiber Optic Fusion Splicing -->
+      <div class="col-12 col-md-6">
+        <div class="lab-card animate-on-scroll">
+
+          <img src="fiber.jpg"
+               loading="lazy"
+               alt="Fiber Optic Fusion Splicing Machine">
+
+          <div class="lab-card-body">
+            <h5 class="card-title">
+              Fiber Optic Fusion Splicing
+            </h5>
+
+            <p class="card-text">
+              Hands-on experience with fiber optic
+              fusion splicing, including fiber
+              preparation, precision cleaving,
+              core alignment, fusion splicing,
+              and splice protection for reliable
+              fiber optic network connections.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ===================== CARD 5 ===================== -->
+      <!-- HENGTONG Egypt Factory Training -->
+      <div class="col-12 col-md-6">
+        <div class="lab-card animate-on-scroll">
+
+          <img src="fiber2.jpg"
+               loading="lazy"
+               alt="HENGTONG Egypt Fiber Optic Factory Training Certificate"
+               style="object-fit:contain;
+                      object-position:center;
+                      background:var(--bg-card);">
+
+          <div class="lab-card-body">
+
+            <h5 class="card-title">
+              HENGTONG Egypt – Fiber Optic Factory Training
+            </h5>
+
+            <p style="color:var(--accent);
+                      font-size:0.85rem;
+                      font-weight:600;
+                      margin-bottom:12px;">
+              <i class="bi bi-clock-history"></i>
+              One-Day Factory Training Workshop
+            </p>
+
+            <p class="card-text">
+              Attended a one-day technical training workshop
+              organized by HENGTONG Egypt, including a factory
+              visit and practical demonstration. Gained
+              introductory knowledge of fiber optic cables,
+              installation methods, and fiber construction
+              technologies through the following topics:
+            </p>
+
+            <ul style="color:var(--text);
+                       font-size:0.95rem;
+                       line-height:1.8;
+                       padding-left:1.25rem;">
+
+              <li>
+                Fundamentals of Optical Fibers & Cables.
+              </li>
+
+              <li>
+                Installation of Direct-Buried
+                Fiber Optic Cable.
+              </li>
+
+              <li>
+                Introduction to Air-Blown Fiber
+                Technology & Construction.
+              </li>
+
+              <li>
+                Factory Visit and Practical Demonstration.
+              </li>
+
+            </ul>
+
+            <div class="tools-badge">
+              <i class="bi bi-building"></i>
+              HENGTONG Egypt – Factory Training
+            </div>
+
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+
+
 
 <section id="contact">
   <div class="container">
@@ -1512,7 +1662,11 @@
             </div>
           </a>
 
-          <a href="https://wa.me/201099863067?text=السلام%20عليكم%20%0Aأنا%20بتواصل%20معك%20من%20خلال%20البورتفوليو" target="_blank" rel="noopener" class="contact-link" aria-label="Contact via WhatsApp">
+          <a href="https://wa.me/201099863067?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%0A%D8%A3%D9%86%D8%A7%20%D8%A8%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%D9%83%20%D9%85%D9%86%20%D8%AE%D9%84%D8%A7%D9%84%20%D8%A7%D9%84%D9%80%20portfolio"
+             target="_blank"
+             rel="noopener"
+             class="contact-link"
+             aria-label="Contact via WhatsApp">
             <div class="icon-wrap" style="background:#25d366;">
               <i class="fa-brands fa-whatsapp" style="color:#fff;"></i>
             </div>
@@ -1583,21 +1737,64 @@
       document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
     })();
 
-    /* ===================== ACTIVE NAV ===================== */
-    (function() {
-      const sections = document.querySelectorAll('section[id]');
-      const navLinks = document.querySelectorAll('.nav-link[data-section]');
-      const io = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            navLinks.forEach(l => l.classList.remove('active'));
-            const a = document.querySelector(`.nav-link[data-section="${entry.target.id}"]`);
-            if (a) a.classList.add('active');
-          }
-        });
-      }, { threshold: 0.4 });
-      sections.forEach(s => io.observe(s));
-    })();
+
+/* ===================== ACTIVE NAV ===================== */
+(function () {
+  const navLinks = document.querySelectorAll(
+    '.nav-link[data-section]'
+  );
+
+  const sections = document.querySelectorAll('section[id]');
+
+  // Map Soft Skills to the Skills navbar link
+  const sectionAliases = {
+    'soft-skills': 'skills',
+    'softskills': 'skills'
+  };
+
+  function updateActiveNav() {
+    const navOffset = 110;
+    let currentSection = '';
+
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+
+      if (rect.top <= navOffset) {
+        currentSection = section.id;
+      }
+    });
+
+    // Keep the final section active at the bottom of the page
+    if (
+      window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight - 5
+    ) {
+      const lastSection = sections[sections.length - 1];
+      if (lastSection) currentSection = lastSection.id;
+    }
+
+    const activeSection =
+      sectionAliases[currentSection] || currentSection;
+
+    navLinks.forEach(link => {
+      const isActive =
+        link.dataset.section === activeSection;
+
+      link.classList.toggle('active', isActive);
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveNav, {
+    passive: true
+  });
+
+  window.addEventListener('resize', updateActiveNav);
+
+  window.addEventListener('load', updateActiveNav);
+
+  updateActiveNav();
+})();
+
 
     /* ===================== NAVBAR SCROLL ===================== */
     (function() {
