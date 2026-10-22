@@ -373,14 +373,24 @@ section {
       font-size: 1.2rem;
     }
 
-    .profile-picture {
-      width: 380px; height: 380px;
-      border-radius: 50%;
-      border: 2px solid var(--accent-border);
-      object-fit: cover;
-      box-shadow: 0 0 50px var(--accent-glow), 0 0 0 10px rgba(59,130,246,0.05);
-      animation: float-img 5s ease-in-out infinite;
-    }
+.profile-picture {
+  width: 380px;
+  height: 380px;
+  max-width: 100%;
+
+  border-radius: 22px;
+  border: 2px solid var(--accent-border);
+
+  object-fit: cover;
+  object-position: center 25%;
+
+  box-shadow:
+    0 0 50px var(--accent-glow),
+    0 0 0 10px rgba(59,130,246,0.05);
+
+  animation: float-img 5s ease-in-out infinite;
+}
+
 
     @keyframes float-img {
       0%,100% { transform: translateY(0); }
