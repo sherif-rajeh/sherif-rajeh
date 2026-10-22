@@ -40,9 +40,19 @@
         "@type": "Person",
         "@id": "https://sherif-rajeh.vercel.app/#person",
         "name": "Sherif Rajeh",
-        "alternateName": ["Sherif Mohamed Rajeh", "Sherif Rajh", "Sherif Rajeh Network Engineer", "Sherif Rajeh Network Enginner", "شريف راجح", "شريف محمد راجح", "شريف راجح مهندس شبكات"],
-        "jobTitle": "Network Engineer","Junior Network Engineer"
+"alternateName": [
+  "Sherif Mohamed Rajeh",
+  "Sherif Rajh",
+  "شريف راجح",
+  "شريف محمد راجح"
+],
+        
+       "jobTitle": [
+         "Network Engineer",
+         "Junior Network Engineer"
+         ],
         "url": "https://sherif-rajeh.vercel.app/",
+
         "image": "https://sherif-rajeh.vercel.app/sherif.jpg",
         "description": "Network Engineer based in Dakahlia, Egypt, specializing in Networking, Routing, Switching, Network Security, VoIP, Cloud Computing and Network Automation.",
         "address": {
@@ -250,15 +260,27 @@
       font-size: 1rem;
       display: flex; align-items: center; justify-content: center;
       cursor: pointer;
-      opacity: 0; transform: translateY(16px);
+  opacity: 0;
+visibility: hidden;
+pointer-events: none;
+transform: translateY(16px);
       transition: opacity var(--transition), transform var(--transition);
       z-index: 999;
       box-shadow: 0 4px 18px var(--accent-glow);
     }
-    #backToTop.visible { opacity: 1; transform: translateY(0); }
+    #backToTop.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
 
+    
     /* ===================== SECTIONS ===================== */
-    section { padding: 96px 0; }
+section {
+  padding: 96px 0;
+  scroll-margin-top: 85px;
+}
 
     /* ===================== SECTION TITLES ===================== */
     .section-title {
@@ -341,13 +363,7 @@
       min-height: 1.75em;
     }
 
-    #typed-text::after {
-      content: '|';
-      animation: blink 1s step-end infinite;
-      color: var(--accent);
-    }
 
-    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
 
     .hero-desc {
       color: var(--text);
@@ -419,6 +435,64 @@
     }
 
     .btn-loading { pointer-events: none; opacity: 0.75; }
+
+
+
+
+
+
+
+
+/* ===================== DOWNLOAD CV BUTTON ===================== */
+.btn-cv {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 28px;
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 18px var(--accent-glow);
+  transition: all 0.3s ease;
+}
+
+.btn-cv:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px var(--accent-glow);
+}
+
+.btn-cv:active {
+  transform: translateY(0);
+}
+
+.btn-cv i {
+  font-size: 1.1rem;
+}
+
+.btn-cv .cv-download-icon {
+  transition: transform 0.3s ease;
+}
+
+.btn-cv:hover .cv-download-icon {
+  transform: translateY(4px);
+}
+
+@media (max-width: 576px) {
+  .btn-cv {
+    width: 100%;
+    padding: 13px 20px;
+  }
+}
 
     /* ===================== CARDS ===================== */
     .card {
@@ -522,7 +596,21 @@
     }
 
     /* ===================== PROJECTS ===================== */
-    .project-card { position: relative; }
+    .project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card > .tools-badge {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.project-card > .mt-3 {
+  width: 100%;
+}
 
     .project-filter {
       display: flex;
@@ -559,13 +647,22 @@
 
     .project-card-wrap.filtered-out { display: none !important; }
 
-    .project-img {
-      width: 100%;
-      border-radius: var(--radius-sm);
-      object-fit: cover;
-      max-height: 200px;
-      border: 1px solid var(--border);
-    }
+  .project-img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+  background: var(--bg-mid);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 576px) {
+  .project-img {
+    height: 180px;
+  }
+}
 
     .project-card ul {
       padding-left: 1.2rem;
@@ -783,6 +880,84 @@
       .d-flex.flex-wrap.gap-3 { flex-direction: column; }
       .btn-primary-custom, .btn-outline-custom { width: 100%; justify-content: center; }
     }
+
+
+
+    @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .profile-picture,
+  .hero-eyebrow .dot {
+    animation: none;
+  }
+
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* MOBILE NAVBAR */
+@media (max-width: 991.98px) {
+  #navmenu {
+    max-height: calc(100dvh - 70px);
+    overflow-y: auto;
+  }
+
+  #navmenu .navbar-nav {
+    padding: 12px 0;
+  }
+
+  #navmenu .nav-link {
+    padding: 12px 14px !important;
+  }
+}
+@media (max-width: 576px) {
+  .project-card .btn-primary-custom,
+  .project-card .btn-outline-custom {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .project-card {
+    padding: 1.25rem !important;
+  }
+
+  .project-card ul {
+    font-size: 0.95rem;
+  }
+
+  .project-card .card-text {
+    font-size: 1rem;
+  }
+}
+.contact-value {
+  overflow-wrap: anywhere;
+}
+
+.contact-link {
+  min-width: 0;
+}
+
+.contact-link > div:last-child {
+  min-width: 0;
+}
+
+@media (max-width: 576px) {
+  #education .card > .d-flex {
+    flex-direction: column;
+    gap: 14px !important;
+  }
+
+  #education .card {
+    padding: 1.25rem !important;
+  }
+}
+
   </style>
 </head>
 
@@ -820,43 +995,57 @@
     </div>
   </nav>
 
-  <!-- ===================== ABOUT / HERO ===================== -->
-  <section id="about">
-    <div class="container">
-      <div class="row align-items-center gy-5">
 
-        <div class="col-lg-7 animate-on-scroll">
-         
+<!-- ===================== ABOUT / HERO ===================== -->
+<section id="about">
+  <div class="container">
+    <div class="row align-items-center gy-5">
 
-          <h1 class="hero-title">
-             <span>Sherif Rajeh</span>
-          </h1>
+      <div class="col-lg-7 animate-on-scroll">
 
-          <p class="hero-subtitle">
-              Junior Network Engineer | Dakahlia, Egypt
-          </p>
+        <h1 class="hero-title">
+          <span>Sherif Rajeh</span>
+        </h1>
 
-          <p class="hero-desc">
-          
-             Junior Network Engineer based in Dakahlia, Egypt, with hands-on experience in Cisco Routing & Switching, Network Security, VoIP, and Network Automation. Explore my enterprise networking projects, practical labs, and technical certifications.
-          </p>
-          
+        <p class="hero-subtitle">
+          Junior Network Engineer | Dakahlia, Egypt
+        </p>
 
-          <div class="d-flex flex-wrap gap-3">
+        <p class="hero-desc">
+          Junior Network Engineer based in Dakahlia, Egypt, with
+          hands-on experience in Cisco Routing &amp; Switching,
+          Network Security, VoIP, and Network Automation.
+          Explore my enterprise networking projects, practical
+          labs, and technical certifications.
+        </p>
 
-            <a href="./sherif-cv.pdf" download="sherif-cv.pdf" class="btn-outline-custom">
-              <i class="bi bi-file-earmark-person"></i> Download CV
-            </a>
-          </div>
+        <div class="d-flex flex-wrap gap-3">
+
+          <a href="./sherif-cv.pdf"
+             download="Sherif_Rajeh_CV.pdf"
+             class="btn-cv">
+            <i class="bi bi-file-earmark-pdf"></i>
+            <span>Download CV</span>
+            <i class="bi bi-download cv-download-icon"></i>
+          </a>
+
         </div>
-
-        <div class="col-lg-5 text-center animate-on-scroll">
-          <img src="sherif.jpg" alt="Sherif Rajeh - Network Engineer" class="profile-picture">
-        </div>
-
       </div>
+
+      <div class="col-lg-5 text-center animate-on-scroll">
+      <img
+        src="sherif.jpg"
+        alt="Sherif Rajeh - Network Engineer"
+       class="profile-picture"
+       width="380"
+       height="380"
+       fetchpriority="high"
+       decoding="async">
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ===================== EDUCATION ===================== -->
   <section id="education" style="background: var(--bg-section);">
@@ -1429,7 +1618,7 @@
         </div>
       </div>
 
-      <!-- GRE Tunnel VPN -->
+      <!-- GRE Tunnel Implementation -->
       <div class="col-lg-6 project-card-wrap" data-category="routing security">
         <div class="card p-4 animate-on-scroll project-card">
 
@@ -1440,7 +1629,7 @@
           </div>
 
           <div class="project-head">
-            <h4 class="card-title mb-0">GRE Tunnel VPN</h4>
+            <h4 class="card-title mb-0">GRE Tunnel Implementation</h4>
           </div>
 
           <p class="card-text">
@@ -1635,7 +1824,7 @@
 
           <ul>
             <li>ASA interfaces — Inside / Outside / DMZ</li>
-            <li>Security levels & zone-based policies</li>
+           <li>Security levels & interface-based access policies</li>
             <li>NAT rules for DMZ server access</li>
             <li>ACLs for inter-zone traffic filtering</li>
             <li>Connectivity & security restriction tests</li>
@@ -2146,7 +2335,16 @@
     (function() {
       const btn = document.getElementById('backToTop');
       window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 400), { passive: true });
-      btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+      btn.addEventListener('click', () => {
+  const reduceMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches;
+
+  window.scrollTo({
+    top: 0,
+    behavior: reduceMotion ? 'instant' : 'smooth'
+  });
+});
     })();
 
     /* ===================== SMOOTH SCROLL ===================== */
@@ -2155,7 +2353,13 @@
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
           e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth' });
+          const reduceMotion = window.matchMedia(
+  '(prefers-reduced-motion: reduce)'
+).matches;
+
+target.scrollIntoView({
+  behavior: reduceMotion ? 'instant' : 'smooth'
+});
           const collapse = document.getElementById('navmenu');
           if (collapse.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(collapse).hide();
         }
@@ -2172,11 +2376,25 @@
 
       errorEl.style.display = 'none';
 
-      if (!name || !email || !message) {
-        errorEl.textContent = 'Please fill in all fields.';
-        errorEl.style.display = 'block';
-        return;
-      }
+   if (!name || !email || !message) {
+  errorEl.textContent = 'Please fill in all fields.';
+  errorEl.style.display = 'block';
+  return;
+}
+
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if (!emailPattern.test(email)) {
+  errorEl.textContent = 'Please enter a valid email address.';
+  errorEl.style.display = 'block';
+  return;
+}
+
+if (message.length < 10) {
+  errorEl.textContent = 'Please enter a message of at least 10 characters.';
+  errorEl.style.display = 'block';
+  return;
+}
 
       btn.classList.add('btn-loading');
       btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
