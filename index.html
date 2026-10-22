@@ -89,7 +89,7 @@
         ],
         "sameAs": [
           "https://www.linkedin.com/in/sherif-rajeh",
-          "https://bebee.com/eg/people/sherif-rajeh"
+          "https://bebee.com/eg/people/sherif-rajh"
         ]
       },
       {
@@ -372,6 +372,22 @@ section {
       margin-bottom: 2rem;
       font-size: 1.2rem;
     }
+
+    .hero-availability {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+  line-height: 1.6;
+}
+
+.hero-availability i {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
 
 .profile-picture {
   width: 380px;
@@ -695,33 +711,6 @@ section {
       margin-bottom: 0.5rem;
     }
 
-    /* ===================== SOFT SKILLS ===================== */
-    .soft-skill-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2rem 1.5rem;
-      text-align: center;
-      transition: all var(--transition);
-      height: 100%;
-    }
-
-    .soft-skill-card:hover {
-      border-color: var(--accent-border);
-      transform: translateY(-5px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.3);
-    }
-
-    .soft-skill-icon {
-      width: 56px; height: 56px;
-      background: var(--accent-dim);
-      border: 1px solid var(--accent-border);
-      border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 1.1rem;
-      font-size: 1.5rem;
-      color: var(--accent);
-    }
 
     /* ===================== LAB SECTION ===================== */
     .lab-card {
@@ -994,7 +983,7 @@ section {
         <ul class="navbar-nav ms-auto gap-1">
           <li class="nav-item"><a href="#about"          class="nav-link" data-section="about">About</a></li>
           <li class="nav-item"><a href="#education"      class="nav-link" data-section="education">Education</a></li>
-          <li class="nav-item"><a href="#languages"      class="nav-link" data-section="languages">Languages</a></li>
+          
           <li class="nav-item"><a href="#skills"         class="nav-link" data-section="skills">Skills</a></li>
           <li class="nav-item"><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
           <li class="nav-item"><a href="#projects"       class="nav-link" data-section="projects">Projects</a></li>
@@ -1021,13 +1010,18 @@ section {
           Junior Network Engineer | Dakahlia, Egypt
         </p>
 
-        <p class="hero-desc">
-          Junior Network Engineer based in Dakahlia, Egypt, with
-          hands-on experience in Cisco Routing &amp; Switching,
-          Network Security, VoIP, and Network Automation.
-          Explore my enterprise networking projects, practical
-          labs, and technical certifications.
-        </p>
+   <p class="hero-desc">
+  Junior Network Engineer in Dakahlia, Egypt.
+  I build and troubleshoot Cisco networks: routing,
+  switching, firewalls and VoIP. Most networking projects below include downloadable
+Packet Tracer files so you can explore and review
+the configurations.
+</p>
+
+<p class="hero-availability">
+  <i class="bi bi-briefcase"></i>
+  Open to junior network engineer and internship roles.
+</p>
 
         <div class="d-flex flex-wrap gap-3">
 
@@ -1078,12 +1072,10 @@ section {
                     <p style="color:var(--accent);font-size:0.82rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin:0 0 10px;">Network & Cloud Computing</p>
                   </div>
                   <span style="background:var(--accent-dim);border:1px solid var(--accent-border);color:var(--accent);border-radius:999px;padding:4px 14px;font-size:0.78rem;font-weight:600;white-space:nowrap;">
-                    Started 2026
+                   2026 – 2030 (Expected)
                   </span>
                 </div>
-                <p class="card-text" style="margin:0;">
-                  Networks and Cloud Computing Program
-                </p>
+               
               </div>
 
             </div>
@@ -1108,9 +1100,7 @@ section {
                     Graduated Jun 2026
                   </span>
                 </div>
-                <p class="card-text" style="margin:0;">
-                  Specialized technical program focused on network infrastructure, routing & switching, network security, and IT systems. Hands-on lab training with Cisco equipment and enterprise networking tools.
-                </p>
+               
               </div>
 
             </div>
@@ -1118,35 +1108,23 @@ section {
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ===================== LANGUAGES ===================== -->
-  <section id="languages">
-    <div class="container">
-      <h2 class="section-title section-title-center">Lan<span>guages</span></h2>
-
-      <div class="row g-4 justify-content-center">
-
-        <div class="col-md-5">
-          <div class="cert-card animate-on-scroll">
-            <i class="bi bi-translate" style="font-size:1.8rem;color:var(--accent);margin-bottom:0.75rem;display:block;"></i>
-            <h5 class="card-title mb-1">Arabic</h5>
-            <p class="cert-issuer">Native</p>
-          </div>
-        </div>
-
-        <div class="col-md-5">
-          <div class="cert-card animate-on-scroll">
-            <i class="bi bi-translate" style="font-size:1.8rem;color:var(--accent);margin-bottom:0.75rem;display:block;"></i>
-            <h5 class="card-title mb-1">English</h5>
-            <p class="cert-issuer">Professional Working Proficiency</p>
-          </div>
-        </div>
-
+      <!-- LANGUAGES -->
+      <div class="text-center mt-4 animate-on-scroll">
+        <p style="color:var(--text-muted);font-size:0.95rem;margin:0;">
+          <i class="bi bi-translate me-2"
+             style="color:var(--accent);"></i>
+          <strong style="color:var(--text);">Languages:</strong>
+          Arabic (Native) · English (Professional Working Proficiency)
+        </p>
       </div>
+
     </div>
   </section>
+
+
+
+<!-- ===================== TECHNICAL SKILLS ===================== -->
+
 
 <!-- ===================== TECHNICAL SKILLS ===================== -->
 <section id="skills" style="background: var(--bg-section);">
@@ -1158,32 +1136,35 @@ section {
 
     <div class="row g-4">
 
-      <!-- ROUTING & SWITCHING -->
+      <!-- ROUTING, SWITCHING & SERVICES -->
       <div class="col-md-6 col-lg-4">
         <div class="card p-4 animate-on-scroll">
           <div class="skill-icon">
             <i class="bi bi-router"></i>
           </div>
 
-          <h4 class="card-title mb-2">Routing & Switching</h4>
+          <h4 class="card-title mb-2">
+            Routing, Switching & Services
+          </h4>
 
           <p class="card-text mb-3">
-            Cisco IOS configuration, VLANs, trunking, Inter-VLAN Routing,
-            VTP, OSPF, EIGRP, HSRP, STP/RSTP, PortFast, EtherChannel,
-            NAT/PAT, and Layer 2 &amp; Layer 3 network design.
+            Cisco network configuration, routing, switching,
+            redundancy, IP services and troubleshooting.
           </p>
 
           <div>
-            <span class="skill-tag">VLANs</span>
-            <span class="skill-tag">Trunking</span>
+            <span class="skill-tag">VLANs & Trunking</span>
             <span class="skill-tag">Inter-VLAN Routing</span>
             <span class="skill-tag">OSPF</span>
             <span class="skill-tag">EIGRP</span>
             <span class="skill-tag">HSRP</span>
             <span class="skill-tag">STP/RSTP</span>
             <span class="skill-tag">EtherChannel</span>
-            <span class="skill-tag">VTP</span>
             <span class="skill-tag">NAT/PAT</span>
+            <span class="skill-tag">DHCP & DNS</span>
+            <span class="skill-tag">SSH</span>
+            <span class="skill-tag">Syslog & NTP</span>
+            <span class="skill-tag">Network Troubleshooting</span>
           </div>
         </div>
       </div>
@@ -1198,9 +1179,8 @@ section {
           <h4 class="card-title mb-2">Network Security</h4>
 
           <p class="card-text mb-3">
-            Network access control, Standard and Extended ACLs, Cisco ASA
-            firewall configuration, Site-to-Site IPsec VPN, GRE tunnels,
-            switch port security, DHCP Snooping, and Dynamic ARP Inspection.
+            Firewall configuration, VPN connectivity,
+            access control and switch security.
           </p>
 
           <div>
@@ -1211,57 +1191,30 @@ section {
             <span class="skill-tag">Port Security</span>
             <span class="skill-tag">DHCP Snooping</span>
             <span class="skill-tag">DAI</span>
-            <span class="skill-tag">Layer 2 Security</span>
           </div>
         </div>
       </div>
 
-      <!-- NETWORK SERVICES -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card p-4 animate-on-scroll">
-          <div class="skill-icon">
-            <i class="bi bi-hdd-network"></i>
-          </div>
-
-          <h4 class="card-title mb-2">Network Services</h4>
-
-          <p class="card-text mb-3">
-            Network addressing and services, DHCP configuration,
-            DNS fundamentals, secure remote device management using SSH,
-            centralized logging with Syslog, and time synchronization with NTP.
-          </p>
-
-          <div>
-            <span class="skill-tag">DHCP</span>
-            <span class="skill-tag">DNS</span>
-            <span class="skill-tag">SSH</span>
-            <span class="skill-tag">Syslog</span>
-            <span class="skill-tag">NTP</span>
-            <span class="skill-tag">TCP/IP</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- WIRELESS NETWORKING -->
+      <!-- WIRELESS -->
       <div class="col-md-6 col-lg-4">
         <div class="card p-4 animate-on-scroll">
           <div class="skill-icon">
             <i class="bi bi-wifi"></i>
           </div>
 
-          <h4 class="card-title mb-2">Wireless Networking</h4>
+          <h4 class="card-title mb-2">
+            Wireless Networking
+          </h4>
 
           <p class="card-text mb-3">
-            Wireless LAN configuration, WLAN setup, Cisco Wireless LAN
-            Controller (WLC) management, Access Point provisioning,
-            and wireless client connectivity troubleshooting.
+            Cisco WLC and access point configuration,
+            WLAN setup and client connectivity testing.
           </p>
 
           <div>
-            <span class="skill-tag">WLAN</span>
             <span class="skill-tag">Cisco WLC</span>
             <span class="skill-tag">Access Points</span>
-            <span class="skill-tag">SSID</span>
+            <span class="skill-tag">WLAN & SSID</span>
             <span class="skill-tag">Wireless Security</span>
           </div>
         </div>
@@ -1274,92 +1227,75 @@ section {
             <i class="bi bi-telephone"></i>
           </div>
 
-          <h4 class="card-title mb-2">VoIP &amp; IP Telephony</h4>
+          <h4 class="card-title mb-2">
+            VoIP & IP Telephony
+          </h4>
 
           <p class="card-text mb-3">
-            IP telephony fundamentals, SIP-based communication,
-            IP phone configuration, extension management, and
-            PBX administration using FreePBX/Asterisk.
+            Cisco IP telephony labs and basic
+            PBX configuration using FreePBX/Asterisk.
           </p>
 
           <div>
+            <span class="skill-tag">Cisco IP Phones</span>
             <span class="skill-tag">VoIP</span>
             <span class="skill-tag">SIP</span>
-            <span class="skill-tag">IP Phones</span>
             <span class="skill-tag">FreePBX</span>
             <span class="skill-tag">Asterisk</span>
           </div>
         </div>
       </div>
 
-      <!-- AUTOMATION & TOOLS -->
+      <!-- AUTOMATION -->
       <div class="col-md-6 col-lg-4">
         <div class="card p-4 animate-on-scroll">
           <div class="skill-icon">
             <i class="bi bi-code-slash"></i>
           </div>
 
-          <h4 class="card-title mb-2">Automation &amp; Tools</h4>
+          <h4 class="card-title mb-2">
+            Network Automation & Tools
+          </h4>
 
           <p class="card-text mb-3">
-            Network automation fundamentals using Python, remote device
-            command execution, configuration backup, and network lab
-            development and testing with Cisco Packet Tracer and GNS3.
+            Python and Netmiko scripts to run commands,
+            collect device information and back up
+            configurations, developed in GNS3.
           </p>
 
           <div>
             <span class="skill-tag">Python</span>
-            <span class="skill-tag">GNS3</span>
-            <span class="skill-tag">Cisco Packet Tracer</span>
             <span class="skill-tag">Netmiko</span>
-            <span class="skill-tag">Network Troubleshooting</span>
+            <span class="skill-tag">GNS3</span>
+            <span class="skill-tag">Packet Tracer</span>
+            <span class="skill-tag">Configuration Backup</span>
           </div>
         </div>
       </div>
 
-      <!-- SYSTEMS & VIRTUALIZATION -->
+      <!-- OTHER TECHNICAL SKILLS -->
       <div class="col-md-6 col-lg-4">
         <div class="card p-4 animate-on-scroll">
           <div class="skill-icon">
-            <i class="bi bi-pc-display"></i>
+            <i class="bi bi-hdd-network"></i>
           </div>
 
-          <h4 class="card-title mb-2">Systems &amp; Virtualization</h4>
+          <h4 class="card-title mb-2">
+            Systems & Infrastructure
+          </h4>
 
           <p class="card-text mb-3">
-            Windows Server fundamentals, Active Directory Domain Services,
-            VMware virtualization, and basic server and network infrastructure
-            administration.
+            Foundational server administration,
+            virtualization, fiber optic handling
+            and structured cabling.
           </p>
 
           <div>
             <span class="skill-tag">Windows Server</span>
             <span class="skill-tag">Active Directory</span>
             <span class="skill-tag">VMware ESXi</span>
-            <span class="skill-tag">Virtualization</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- FIBER OPTICS & INFRASTRUCTURE -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card p-4 animate-on-scroll">
-          <div class="skill-icon">
-            <i class="bi bi-bezier2"></i>
-          </div>
-
-          <h4 class="card-title mb-2">Fiber Optics &amp; Infrastructure</h4>
-
-          <p class="card-text mb-3">
-            Fiber optic cable fundamentals, fusion splicing, fiber preparation,
-            precision cleaving, splice protection, and structured cabling
-            fundamentals.
-          </p>
-
-          <div>
             <span class="skill-tag">Fiber Optics</span>
             <span class="skill-tag">Fusion Splicing</span>
-            <span class="skill-tag">Fiber Preparation</span>
             <span class="skill-tag">Structured Cabling</span>
           </div>
         </div>
@@ -1370,91 +1306,86 @@ section {
 </section>
 
 
-  <!-- ===================== SOFT SKILLS ===================== -->
-  <section id="soft-skills">
-    <div class="container">
-      <h2 class="section-title section-title-center">Soft <span>Skills</span></h2>
-
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-3 col-sm-6">
-          <div class="soft-skill-card animate-on-scroll">
-            <div class="soft-skill-icon"><i class="bi bi-lightbulb"></i></div>
-            <h5 class="card-title mb-2">Problem Solving</h5>
-            <p class="card-text">Analyze network issues, identify root causes, implement efficient solutions under pressure.</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="soft-skill-card animate-on-scroll">
-            <div class="soft-skill-icon"><i class="bi bi-search"></i></div>
-            <h5 class="card-title mb-2">Troubleshooting</h5>
-            <p class="card-text">Systematic approach to diagnosing connectivity and configuration issues with methodical verification.</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="soft-skill-card animate-on-scroll">
-            <div class="soft-skill-icon"><i class="bi bi-people"></i></div>
-            <h5 class="card-title mb-2">Teamwork</h5>
-            <p class="card-text">Effective collaboration in lab environments and group projects to achieve shared technical goals.</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="soft-skill-card animate-on-scroll">
-            <div class="soft-skill-icon"><i class="bi bi-clock-history"></i></div>
-            <h5 class="card-title mb-2">Time Management</h5>
-            <p class="card-text">Prioritizing tasks and meeting deadlines while balancing lab work, projects, and coursework.</p>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
 
   <!-- ===================== CERTIFICATIONS ===================== -->
   <section id="certifications" style="background: var(--bg-section);">
     <div class="container">
       <h2 class="section-title section-title-center">Certifi<span>cations</span></h2>
 
-      <div class="row g-4 justify-content-center">
+    
+<div class="row g-4 justify-content-center">
 
-        <div class="col-md-6 col-lg-5">
-          <div class="cert-card animate-on-scroll">
-            <i class="bi bi-award-fill" style="font-size:1.8rem;color:var(--accent);margin-bottom:0.75rem;display:block;"></i>
-            <h5 class="card-title mb-1">Network Technician Career Path</h5>
-            <p class="cert-issuer">Cisco Networking Academy</p>
-            <p style="color:var(--text-muted);font-size:0.8rem;margin:6px 0 0;">Issued Apr 2026</p>
-          </div>
-        </div>
+  <!-- APR 2026 -->
+  <div class="col-md-6 col-lg-5">
+    <div class="cert-card animate-on-scroll">
+      <i class="bi bi-award-fill"
+         style="font-size:1.8rem;color:var(--accent);margin-bottom:0.75rem;display:block;"></i>
 
-        <div class="col-md-6 col-lg-5">
-          <div class="cert-card animate-on-scroll">
-            <i class="bi bi-shield-lock-fill" style="font-size:1.8rem;color:var(--accent);margin-bottom:0.75rem;display:block;"></i>
-            <h5 class="card-title mb-1">Junior Cybersecurity Analyst Career Path</h5>
-            <p class="cert-issuer">Cisco Networking Academy</p>
-            <p style="color:var(--text-muted);font-size:0.8rem;margin:6px 0 0;">Issued Jan 2025</p>
-          </div>
-        </div>
+      <h5 class="card-title mb-1">
+        Network Technician Career Path
+      </h5>
 
-        <div class="col-md-6 col-lg-5">
-          <div class="cert-card animate-on-scroll">
-            <i class="bi bi-pc-display" style="font-size:1.8rem;color:var(--accent);margin-bottom:0.75rem;display:block;"></i>
-            <h5 class="card-title mb-1">Information Technology Fundamentals</h5>
-            <p class="cert-issuer">IBM SkillsBuild</p>
-            <p style="color:var(--text-muted);font-size:0.8rem;margin:6px 0 0;">Issued Jan 2025</p>
-          </div>
-        </div>
+      <p class="cert-issuer">Cisco Networking Academy</p>
+      <p style="color:var(--text-muted);font-size:0.8rem;margin:6px 0 0;">
+        Issued Apr 2026
+      </p>
+    </div>
+  </div>
 
-        <div class="col-md-6 col-lg-5">
-          <div class="cert-card animate-on-scroll">
-            <i class="bi bi-diagram-2-fill" style="font-size:1.8rem;color:var(--accent);margin-bottom:0.75rem;display:block;"></i>
-            <h5 class="card-title mb-1">Switching, Routing & Wireless Essentials</h5>
-            <p class="cert-issuer">Cisco Networking Academy</p>
-            <p style="color:var(--text-muted);font-size:0.8rem;margin:6px 0 0;">Issued Mar 2025</p>
-          </div>
-        </div>
+  <!-- MAR 2025 -->
+  <div class="col-md-6 col-lg-5">
+    <div class="cert-card animate-on-scroll">
+      <i class="bi bi-diagram-2-fill"
+         style="font-size:1.8rem;color:var(--accent);margin-bottom:0.75rem;display:block;"></i>
 
-      </div>
+      <h5 class="card-title mb-1">
+        Switching, Routing & Wireless Essentials
+      </h5>
 
-      <div class="text-center mt-5 animate-on-scroll">
+      <p class="cert-issuer">Cisco Networking Academy</p>
+      <p style="color:var(--text-muted);font-size:0.8rem;margin:6px 0 0;">
+        Issued Mar 2025
+      </p>
+    </div>
+  </div>
+
+  <!-- JAN 2025 -->
+  <div class="col-md-6 col-lg-5">
+    <div class="cert-card animate-on-scroll">
+      <i class="bi bi-pc-display"
+         style="font-size:1.8rem;color:var(--accent);margin-bottom:0.75rem;display:block;"></i>
+
+      <h5 class="card-title mb-1">
+        Information Technology Fundamentals
+      </h5>
+
+      <p class="cert-issuer">IBM SkillsBuild</p>
+      <p style="color:var(--text-muted);font-size:0.8rem;margin:6px 0 0;">
+        Issued Jan 2025
+      </p>
+    </div>
+  </div>
+
+  <!-- JAN 2025 -->
+  <div class="col-md-6 col-lg-5">
+    <div class="cert-card animate-on-scroll">
+      <i class="bi bi-shield-lock-fill"
+         style="font-size:1.8rem;color:var(--accent);margin-bottom:0.75rem;display:block;"></i>
+
+      <h5 class="card-title mb-1">
+        Junior Cybersecurity Analyst Career Path
+      </h5>
+
+      <p class="cert-issuer">Cisco Networking Academy</p>
+      <p style="color:var(--text-muted);font-size:0.8rem;margin:6px 0 0;">
+        Issued Jan 2025
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<div class="text-center mt-5 animate-on-scroll">
         <a href="https://www.credly.com/users/sherif-rajeh" target="_blank" rel="noopener"
            class="btn-primary-custom" style="text-decoration:none;">
           <i class="bi bi-patch-check-fill"></i>
@@ -1497,9 +1428,10 @@ section {
           </h4>
 
           <p class="card-text">
-            Designed and implemented a dual-site (HQ & Branch) enterprise network built around a Layer 3 backbone:
-          </p>
-
+  Designed a dual-site HQ and Branch network with
+  dynamic routing, VLAN segmentation, redundancy,
+  network security and centralized services.
+</p>
           <ul>
             <li>VTP, VLANs & Inter-VLAN Routing (SVI) — HQ & Branch</li>
             <li>OSPF Area 0 backbone + EtherChannel (LACP/PAgP)</li>
@@ -1548,8 +1480,10 @@ section {
           </div>
 
           <p class="card-text">
-            A secure encrypted tunnel built between two remote networks over a simulated public WAN, demonstrating a full IKE/IPsec negotiation from policy to verified traffic:
-          </p>
+  Configured a site-to-site IPsec VPN between two
+  remote networks over a simulated WAN, using
+  IKE policies, encryption and crypto maps.
+</p>
 
           <ul>
             <li>ISAKMP Phase 1 (AES, SHA)</li>
@@ -1592,8 +1526,10 @@ section {
           </div>
 
           <p class="card-text">
-            A focused lab simulating real-world internet connectivity, exploring the full spectrum of NAT translation techniques used to bridge private and public address spaces:
-          </p>
+  Configured Static NAT, Dynamic NAT and PAT
+  to provide connectivity between private
+  networks and a simulated public network.
+</p>
 
           <ul>
             <li>Static NAT for internal servers</li>
@@ -1642,9 +1578,11 @@ section {
             <h4 class="card-title mb-0">GRE Tunnel Implementation</h4>
           </div>
 
-          <p class="card-text">
-            A GRE tunnel configured to carry dynamic routing protocols transparently between sites, enabling routing adjacencies to form across an otherwise unaware transport network:
-          </p>
+        <p class="card-text">
+  Configured a GRE tunnel between remote networks
+  to transport routing traffic and enable
+  end-to-end connectivity across a WAN.
+</p>
 
           <ul>
             <li>GRE tunnel interfaces configuration</li>
@@ -1686,9 +1624,11 @@ section {
             <h4 class="card-title mb-0">IPv6 Routing with EIGRP</h4>
           </div>
 
-          <p class="card-text">
-            A next-generation addressing lab migrating an enterprise topology to IPv6, with EIGRP handling dynamic route exchange across the new address space:
-          </p>
+         <p class="card-text">
+  Built an IPv6 network using EIGRP for dynamic
+  routing and connectivity between multiple
+  network segments.
+</p>
 
           <ul>
             <li>IPv6 unicast routing enabled</li>
@@ -1732,12 +1672,12 @@ section {
             </h4>
           </div>
 
-          <p class="card-text">
-            Built and configured a basic VoIP lab in Cisco Packet Tracer
-            using a Cisco 2811 router and a Cisco IP Phone 7960.
-            Configured the required router and IP telephony settings
-            to practice IP phone deployment and basic VoIP operation.
-          </p>
+        <p class="card-text">
+  Configured a Cisco 2811 router and Cisco
+  IP Phone 7960 in Packet Tracer, implementing
+  basic IP telephony services and testing
+  phone connectivity.
+</p>
 
           <ul>
             <li>Cisco IP Phone 7960 connectivity</li>
@@ -1780,19 +1720,17 @@ section {
             </h4>
           </div>
 
-          <p class="card-text">
-            A two-network enterprise design centered on centralized authentication — separating production access control from a dedicated, isolated management infrastructure:
-          </p>
-
-          <ul>
-            <li><strong style="color:var(--accent);">Network 1:</strong> AAA Security Services</li>
-            <li>TACACS+ and RADIUS authentication</li>
-            <li>Device access control policies</li>
-            <li>Secure login validation</li>
-            <li><strong style="color:var(--accent);">Network 2:</strong> Controller / Management</li>
-            <li>Dedicated management infrastructure</li>
-            <li>Isolated from production environment</li>
-          </ul>
+         <p class="card-text">
+  Centralized TACACS+ and RADIUS authentication,
+  with a separate management network isolated
+  from production.
+</p>
+         <ul>
+  <li>TACACS+ and RADIUS authentication</li>
+  <li>Centralized device access control</li>
+  <li>Secure login testing</li>
+  <li>Separate management network</li>
+</ul>
 
           <div class="tools-badge">
             <i class="bi bi-tools"></i>
@@ -1878,9 +1816,12 @@ section {
             </h4>
           </div>
 
-          <p class="card-text">
-            A network automation lab combining GNS3 with virtual machines, using Python to programmatically connect to Cisco devices over Telnet and drive configuration tasks without manual CLI work:
-          </p>
+       <p class="card-text">
+  Automated Cisco device administration in GNS3
+  using Python scripts for remote command
+  execution, device information collection
+  and configuration backups.
+</p>
 
           <ul>
             <li>Scripted device login and command execution</li>
@@ -2207,7 +2148,7 @@ section {
             </div>
           </a>
 
-          <a href="https://bebee.com/eg/people/sherif-rajeh" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Visit beBee profile">
+          <a href="https://bebee.com/eg/people/sherif-rajh" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Visit beBee profile">
             <div class="icon-wrap" style="background:#f5a623;">
               <i class="bi bi-person-badge-fill" style="color:#fff;"></i>
             </div>
@@ -2267,11 +2208,7 @@ section {
 
   const sections = document.querySelectorAll('section[id]');
 
-  // Map Soft Skills to the Skills navbar link
-  const sectionAliases = {
-    'soft-skills': 'skills',
-    'softskills': 'skills'
-  };
+
 
   function updateActiveNav() {
     const navOffset = 110;
@@ -2294,8 +2231,7 @@ section {
       if (lastSection) currentSection = lastSection.id;
     }
 
-    const activeSection =
-      sectionAliases[currentSection] || currentSection;
+const activeSection = currentSection;
 
     navLinks.forEach(link => {
       const isActive =
