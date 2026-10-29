@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0f1e">
+  <meta name="color-scheme" content="dark">
 
   <!-- SEO -->
   <title>Sherif Rajeh | Junior Network Engineer in Dakahlia, Egypt</title>
@@ -21,14 +23,19 @@
   <meta property="og:url" content="https://sherif-rajeh.vercel.app/">
   <meta property="og:title" content="Sherif Rajeh | Junior Network Engineer in Dakahlia, Egypt">
   <meta property="og:description" content="Portfolio of Sherif Rajeh, a Junior Network Engineer specializing in Cisco routing and switching, network security, VoIP and Python automation.">
-  <meta property="og:image" content="https://sherif-rajeh.vercel.app/sherif.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://sherif-rajeh.vercel.app/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Sherif Rajeh - Junior Network Engineer">
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sherif Rajeh | Junior Network Engineer Portfolio">
   <meta name="twitter:description" content="Junior Network Engineer projects covering routing, switching, security, VoIP and automation by Sherif Rajeh in Dakahlia, Egypt.">
-  <meta name="twitter:image" content="https://sherif-rajeh.vercel.app/sherif.jpg">
+  <meta name="twitter:image" content="https://sherif-rajeh.vercel.app/og-image.jpg">
+  <meta name="twitter:image:alt" content="Sherif Rajeh - Junior Network Engineer">
 
   <!-- Structured Data / Google -->
   <script type="application/ld+json">
@@ -39,16 +46,14 @@
         "@type": "Person",
         "@id": "https://sherif-rajeh.vercel.app/#person",
         "name": "Sherif Rajeh",
-"alternateName": [
-  "Sherif Mohamed Rajeh",
-  "Sherif Rajh",
-  "شريف راجح",
-  "شريف محمد راجح"
-],
-        
-       "jobTitle": "Junior Network Engineer",
+        "alternateName": [
+          "Sherif Mohamed Rajeh",
+          "Sherif Rajh",
+          "شريف راجح",
+          "شريف محمد راجح"
+        ],
+        "jobTitle": "Junior Network Engineer",
         "url": "https://sherif-rajeh.vercel.app/",
-
         "image": "https://sherif-rajeh.vercel.app/sherif.jpg",
         "description": "Junior Network Engineer based in Dakahlia, Egypt, working with Cisco routing and switching, network security, VoIP and Python automation.",
         "address": {
@@ -117,9 +122,17 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0f1e'/><text y='.9em' font-size='80' x='10'>🌐</text></svg>">
+  <link rel="icon" type="image/png" sizes="180x180" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
@@ -245,29 +258,36 @@
 
     /* Back to top */
     #backToTop {
-      position: fixed; bottom: 2rem; right: 2rem;
-      width: 42px; height: 42px;
-      background: var(--accent); color: #fff;
-      border: none; border-radius: 50%;
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 42px;
+      height: 42px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
       font-size: 1rem;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
-  opacity: 0;
-visibility: hidden;
-pointer-events: none;
-transform: translateY(16px);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(16px);
       transition: opacity var(--transition), transform var(--transition);
       z-index: 999;
       box-shadow: 0 4px 18px var(--accent-glow);
     }
-    #backToTop.visible {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateY(0);
-}
 
-    
+    #backToTop.visible {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
     /* ===================== SECTIONS ===================== */
 section {
   padding: 96px 0;
@@ -306,6 +326,7 @@ section {
     /* ===================== HERO ===================== */
     #about {
       min-height: calc(100vh - 70px);
+      min-height: calc(100svh - 70px);
       display: flex; align-items: center;
     }
 
@@ -669,21 +690,14 @@ section {
     .project-card-wrap.filtered-out { display: none !important; }
 
   .project-img {
-  display: block;
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  object-position: center;
-  background: var(--bg-mid);
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-}
-
-@media (max-width: 576px) {
-  .project-img {
-    height: 180px;
-  }
-}
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: auto 16 / 10; /* placeholder ratio until the image loads */
+      background: var(--bg-mid);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+    }
 
     .project-card ul {
       padding-left: 1.2rem;
@@ -725,11 +739,10 @@ section {
 
   
     .lab-card img {
+      display: block;
       width: 100%;
-      height: 250px;
-      object-fit: contain;
-      object-position: center;
-      background: var(--bg-card);
+      height: auto;
+      aspect-ratio: auto 16 / 10; /* placeholder ratio until the image loads */
       transition: transform 0.5s ease;
     }
 
@@ -755,7 +768,7 @@ section {
       background: rgba(255,255,255,0.06) !important;
     }
 
-    .form-control::placeholder { color: rgba(232,237,245,0.3); }
+    .form-control::placeholder { color: rgba(232,237,245,0.45); }
 
     .form-label {
       color: var(--text-muted);
@@ -826,15 +839,6 @@ section {
       margin-top: 0.5rem;
     }
 
-    /* ===================== MODAL ===================== */
-    .modal-content {
-      background: var(--bg-mid) !important;
-      border: 1px solid var(--accent-border);
-      border-radius: 16px;
-    }
-    .modal-header { border-bottom: 1px solid var(--border); }
-    .modal-footer { border-top: 1px solid var(--border); }
-
     /* ===================== FOOTER ===================== */
     footer {
       background: rgba(0,0,0,0.3);
@@ -871,7 +875,7 @@ section {
       .profile-picture { width: 230px; height: 230px; }
       #backToTop { bottom: 1rem; right: 1rem; }
       .section-title { font-size: clamp(1.25rem, 6.5vw, 1.6rem); }
-      .d-flex.flex-wrap.gap-3 { flex-direction: column; }
+      .hero-actions { flex-direction: column; }
       .btn-primary-custom, .btn-outline-custom { width: 100%; justify-content: center; }
     }
 
@@ -952,20 +956,52 @@ section {
   }
 }
 
+
+    /* ===================== ACCESSIBILITY & HELPERS ===================== */
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .navbar-toggler:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .form-control:focus-visible { outline: none; }
+    main:focus { outline: none; }
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 16px;
+      z-index: 2000;
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      text-decoration: none;
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus { top: 12px; color: #fff; }
+
+    /* Subtitle lives inside the <h1> for SEO, styled like the old paragraph */
+    .hero-title .hero-subtitle {
+      display: block;
+      margin-top: 0.5rem;
+      font-family: var(--font-body);
+      line-height: 1.75;
+      color: var(--text-muted);
+    }
   </style>
   <noscript><style>.animate-on-scroll{opacity:1;transform:none}</style></noscript>
 </head>
 
 <body>
 
-  <div class="bg-layer"></div>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <div class="bg-layer" aria-hidden="true"></div>
 
   <button type="button" id="backToTop" aria-label="Back to top">
     <i class="bi bi-arrow-up"></i>
   </button>
 
   <!-- ===================== NAVBAR ===================== -->
-  <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav" aria-label="Main navigation">
     <div class="container">
       <a href="#about" class="navbar-brand">SHERIF <span>RAJEH</span></a>
 
@@ -986,10 +1022,14 @@ section {
           <li class="nav-item"><a href="#lab"            class="nav-link" data-section="lab">Lab</a></li>
           <li class="nav-item"><a href="#contact"        class="nav-link" data-section="contact">Contact</a></li>
         </ul>
+        <div class="ms-lg-3 mt-2 mt-lg-0">
+
       </div>
     </div>
   </nav>
 
+
+<main id="main" tabindex="-1">
 
 <!-- ===================== ABOUT / HERO ===================== -->
 <section id="about">
@@ -1000,21 +1040,15 @@ section {
 
         <h1 class="hero-title">
           <span>Sherif Rajeh</span>
+          <span class="hero-subtitle">Junior Network Engineer | Dakahlia, Egypt</span>
         </h1>
 
-        <p class="hero-subtitle">
-          Junior Network Engineer | Dakahlia, Egypt
-        </p>
-
    <p class="hero-desc">
-  I build and troubleshoot Cisco networks: routing,
-  switching, firewalls and VoIP. Most projects below
-  include downloadable Packet Tracer files so you can
-  open and review the configurations.
+Junior Network Engineer with hands-on experience in Cisco routing, switching, network security, and VoIP. Skilled in designing, configuring, and troubleshooting enterprise networks, with documented projects and downloadable Packet Tracer files available for technical review.
 </p>
 
 <p class="hero-skills">
-  Cisco · OSPF · EIGRP · HSRP · VLANs · ASA · IPsec VPN · Python
+  Cisco · OSPF · EIGRP · HSRP · VLANs· IPsec VPN  · GRE tunnels · IPv6 · Cisco ASA · STP · WLC · ACLs
 </p>
 
 <p class="hero-availability">
@@ -1022,7 +1056,7 @@ section {
   Open to junior network engineer and internship roles.
 </p>
 
-        <div class="d-flex flex-wrap gap-3">
+        <div class="d-flex flex-wrap gap-3 hero-actions">
 
           <a href="./sherif-cv.pdf"
              download="Sherif_Rajeh_CV.pdf"
@@ -1395,7 +1429,7 @@ section {
 </div>
 
 <div class="text-center mt-5 animate-on-scroll">
-        <a href="https://www.credly.com/users/sherif-rajeh" target="_blank" rel="noopener"
+        <a href="https://www.credly.com/users/sherif-rajeh" target="_blank" rel="noopener noreferrer"
            class="btn-primary-custom">
           <i class="bi bi-patch-check-fill"></i>
           View Verified Certifications on Credly
@@ -1406,8 +1440,8 @@ section {
   </section>
 
 
-<!-- ===================== PROJECTS ===================== -->
-<section id="projects">
+
+  <!-- ===================== PROJECTS ===================== --><section id="projects">
   <div class="container">
 
     <h2 class="section-title section-title-center">
@@ -1415,11 +1449,11 @@ section {
     </h2>
 
     <div class="project-filter animate-on-scroll">
-      <button type="button" class="filter-btn active" data-filter="all">All</button>
-      <button type="button" class="filter-btn" data-filter="routing">Routing</button>
-      <button type="button" class="filter-btn" data-filter="security">Security</button>
-      <button type="button" class="filter-btn" data-filter="services">Services</button>
-      <button type="button" class="filter-btn" data-filter="automation">Automation</button>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="routing">Routing</button>
+      <button class="filter-btn" data-filter="security">Security</button>
+      <button class="filter-btn" data-filter="services">Services</button>
+      <button class="filter-btn" data-filter="automation">Automation</button>
     </div>
 
     <div class="row g-4 justify-content-center">
@@ -1428,23 +1462,20 @@ section {
       <div class="col-lg-6 project-card-wrap" data-category="routing">
         <div class="card p-4 animate-on-scroll project-card">
 
-          <a href="project1.jpg" target="_blank" rel="noopener" class="project-img-link" title="Open full size">
-            <img src="project1.jpg" loading="lazy"
-                 alt="Enterprise network design topology in Packet Tracer"
-                 class="project-img mb-4">
-          </a>
+          <img src="project1.jpg" loading="lazy"
+               alt="Enterprise Network Design"
+               class="project-img mb-4">
 
-          <h3 class="card-title">
+          <h4 class="card-title">
             Enterprise Network Design
-          </h3>
+          </h4>
 
           <p class="card-text">
-  Designed a dual-site HQ and Branch network with
-  dynamic routing, VLAN segmentation, redundancy,
-  network security and centralized services.
-</p>
+            Designed and implemented a dual-site (HQ & Branch) enterprise network built around a Layer 3 backbone:
+          </p>
+
           <ul>
-            <li>VTP, VLANs &amp; Inter-VLAN Routing (SVI) — HQ &amp; Branch</li>
+            <li>VTP, VLANs & Inter-VLAN Routing (SVI) — HQ & Branch</li>
             <li>OSPF Area 0 backbone + EtherChannel (LACP/PAgP)</li>
             <li>HSRP redundancy + RSTP/PortFast</li>
             <li>Port Security, DHCP Snooping, DAI</li>
@@ -1459,7 +1490,8 @@ section {
           <div class="mt-3 d-flex flex-wrap gap-2">
             <a href="./sherif.pkt"
                download="Sherif_Network_Project.pkt"
-               class="btn-primary-custom">
+               class="btn-primary-custom"
+               style="text-decoration:none;">
               <i class="bi bi-download"></i>
               Packet Tracer File
             </a>
@@ -1475,403 +1507,224 @@ section {
         </div>
       </div>
 
-      <!-- Site-to-Site IPsec VPN -->
-      <div class="col-lg-6 project-card-wrap" data-category="security">
-        <div class="card p-4 animate-on-scroll project-card">
 
-          <div class="mb-4">
-            <a href="vpn.jpg" target="_blank" rel="noopener" class="project-img-link" title="Open full size">
-            <img src="vpn.jpg" loading="lazy"
-                 alt="Site-to-site IPsec VPN topology in Packet Tracer"
-                 class="project-img">
-          </a>
+          <div class="col-lg-6 project-card-wrap" data-category="security">
+          <div class="card p-4 animate-on-scroll project-card">
+            <div class="img-wrap mb-4">
+              <img src="vpn.jpg" loading="lazy" alt="IPsec VPN" class="project-img">
+            </div>
+            <div class="project-head">
+              <h4 class="card-title mb-0">Site-to-Site IPsec VPN</h4>
+             
+            </div>
+            <p class="card-text">A secure encrypted tunnel built between two remote networks over a simulated public WAN, demonstrating a full IKE/IPsec negotiation from policy to verified traffic:</p>
+            <ul>
+              <li>ISAKMP Phase 1 (AES, SHA)</li>
+              <li>IPsec Phase 2 encryption</li>
+              <li>ACL for interesting traffic</li>
+              <li>Crypto maps between routers</li>
+              <li>Verified secure tunnel establishment</li>
+            </ul>
+            <div class="tools-badge"><i class="bi bi-tools"></i> Cisco Packet Tracer</div>
+            <div class="mt-3">
+              <a href="./vpn.pkt" download="VPN_Project.pkt" class="btn-primary-custom" style="text-decoration:none;">
+                <i class="bi bi-download"></i> Packet Tracer File
+              </a>
+            </div>
           </div>
-
-          <div>
-            <h3 class="card-title mb-0">Site-to-Site IPsec VPN</h3>
-          </div>
-
-          <p class="card-text">
-  Configured a site-to-site IPsec VPN between two
-  remote networks over a simulated WAN, using
-  IKE policies, encryption and crypto maps.
-</p>
-
-          <ul>
-            <li>ISAKMP Phase 1 (AES, SHA)</li>
-            <li>IPsec Phase 2 encryption</li>
-            <li>ACL for interesting traffic</li>
-            <li>Crypto maps between routers</li>
-            <li>Verified secure tunnel establishment</li>
-          </ul>
-
-          <div class="tools-badge">
-            <i class="bi bi-tools"></i>
-            Cisco Packet Tracer
-          </div>
-
-          <div class="mt-3">
-            <a href="./vpn.pkt"
-               download="VPN_Project.pkt"
-               class="btn-primary-custom">
-              <i class="bi bi-download"></i>
-              Packet Tracer File
-            </a>
-          </div>
-
         </div>
-      </div>
 
-      <!-- NAT Implementation -->
-      <div class="col-lg-6 project-card-wrap" data-category="routing services">
-        <div class="card p-4 animate-on-scroll project-card">
 
-          <div class="mb-4">
-            <a href="nat.jpg" target="_blank" rel="noopener" class="project-img-link" title="Open full size">
-            <img src="nat.jpg" loading="lazy"
-                 alt="NAT lab topology in Packet Tracer"
-                 class="project-img">
-          </a>
+        <!-- Project 1 -->
+        <div class="col-lg-6 project-card-wrap" data-category="routing">
+          <div class="card p-4 animate-on-scroll project-card">
+            <div class="img-wrap mb-4">
+              <img src="nat.jpg" loading="lazy" alt="NAT Lab" class="project-img">
+            </div>
+            <div class="project-head">
+              <h4 class="card-title mb-0">NAT Implementation Lab</h4>
+            </div>
+            <p class="card-text">A focused lab simulating real-world internet connectivity, exploring the full spectrum of NAT translation techniques used to bridge private and public address spaces:</p>
+            <ul>
+              <li>Static NAT for internal servers</li>
+              <li>Dynamic NAT for multiple users</li>
+              <li>PAT (Overload) configuration</li>
+              <li>ACLs for traffic control</li>
+              <li>NAT translation table verification</li>
+            </ul>
+            <div class="tools-badge"><i class="bi bi-tools"></i> Cisco Packet Tracer</div>
+            <div class="mt-3 d-flex flex-wrap gap-2">
+              <a href="./nat.pkt" download="NAT_Network_Project.pkt" class="btn-primary-custom" style="text-decoration:none;">
+                <i class="bi bi-download"></i> Packet Tracer File
+              </a>
+              <a href="./nat.pdf" download="NAT_Network_Report.pdf" class="btn-outline-custom">
+                <i class="bi bi-file-earmark-word"></i> Project Report
+              </a>
+            </div>
           </div>
-
-          <div>
-            <h3 class="card-title mb-0">NAT Implementation Lab</h3>
-          </div>
-
-          <p class="card-text">
-  Configured Static NAT, Dynamic NAT and PAT
-  to provide connectivity between private
-  networks and a simulated public network.
-</p>
-
-          <ul>
-            <li>Static NAT for internal servers</li>
-            <li>Dynamic NAT for multiple users</li>
-            <li>PAT (Overload) configuration</li>
-            <li>ACLs for traffic control</li>
-            <li>NAT translation table verification</li>
-          </ul>
-
-          <div class="tools-badge">
-            <i class="bi bi-tools"></i>
-            Cisco Packet Tracer
-          </div>
-
-          <div class="mt-3 d-flex flex-wrap gap-2">
-            <a href="./nat.pkt"
-               download="NAT_Network_Project.pkt"
-               class="btn-primary-custom">
-              <i class="bi bi-download"></i>
-              Packet Tracer File
-            </a>
-
-            <a href="./nat.docx"
-               download="NAT_Network_Report.docx"
-               class="btn-outline-custom">
-              <i class="bi bi-file-earmark-word"></i>
-              Project Report
-            </a>
-          </div>
-
         </div>
-      </div>
 
-      <!-- GRE Tunnel Implementation -->
-      <div class="col-lg-6 project-card-wrap" data-category="routing security">
-        <div class="card p-4 animate-on-scroll project-card">
-
-          <div class="mb-4">
-            <a href="gre.jpg" target="_blank" rel="noopener" class="project-img-link" title="Open full size">
-            <img src="gre.jpg" loading="lazy"
-                 alt="GRE tunnel topology in Packet Tracer"
-                 class="project-img">
-          </a>
+        <!-- Project 3 -->
+        <div class="col-lg-6 project-card-wrap" data-category="routing security">
+          <div class="card p-4 animate-on-scroll project-card">
+            <div class="img-wrap mb-4">
+              <img src="gre.jpg" loading="lazy" alt="GRE Tunnel" class="project-img">
+            </div>
+            <div class="project-head">
+              <h4 class="card-title mb-0">GRE Tunnel VPN</h4>
+            </div>
+            <p class="card-text">A GRE tunnel configured to carry dynamic routing protocols transparently between sites, enabling routing adjacencies to form across an otherwise unaware transport network:</p>
+            <ul>
+              <li>GRE tunnel interfaces configuration</li>
+              <li>Tunnel source & destination IP setup</li>
+              <li>OSPF over GRE tunnel</li>
+              <li>End-to-end connectivity between LANs</li>
+              <li>Reachability testing with ping/traceroute</li>
+            </ul>
+            <div class="tools-badge"><i class="bi bi-tools"></i> Cisco Packet Tracer</div>
+            <div class="mt-3">
+              <a href="./gre.pkt" download="GRE_Tunnel_Project.pkt" class="btn-primary-custom" style="text-decoration:none;">
+                <i class="bi bi-download"></i> Packet Tracer File
+              </a>
+            </div>
           </div>
-
-          <div>
-            <h3 class="card-title mb-0">GRE Tunnel Implementation</h3>
-          </div>
-
-        <p class="card-text">
-  Configured a GRE tunnel between remote networks
-  to transport routing traffic and enable
-  end-to-end connectivity across a WAN.
-</p>
-
-          <ul>
-            <li>GRE tunnel interfaces configuration</li>
-            <li>Tunnel source &amp; destination IP setup</li>
-            <li>OSPF/EIGRP over GRE tunnel</li>
-            <li>End-to-end connectivity between LANs</li>
-            <li>Reachability testing with ping/traceroute</li>
-          </ul>
-
-          <div class="tools-badge">
-            <i class="bi bi-tools"></i>
-            Cisco Packet Tracer
-          </div>
-
-          <div class="mt-3">
-            <a href="./gre.pkt"
-               download="GRE_Tunnel_Project.pkt"
-               class="btn-primary-custom">
-              <i class="bi bi-download"></i>
-              Packet Tracer File
-            </a>
-          </div>
-
         </div>
-      </div>
 
-      <!-- IPv6 EIGRP -->
-      <div class="col-lg-6 project-card-wrap" data-category="routing">
-        <div class="card p-4 animate-on-scroll project-card">
-
-          <div class="mb-4">
-            <a href="ipv6.jpg" target="_blank" rel="noopener" class="project-img-link" title="Open full size">
-            <img src="ipv6.jpg" loading="lazy"
-                 alt="IPv6 EIGRP topology in Packet Tracer"
-                 class="project-img">
-          </a>
+        <!-- Project 4 -->
+        <div class="col-lg-6 project-card-wrap" data-category="routing">
+          <div class="card p-4 animate-on-scroll project-card">
+            <div class="img-wrap mb-4">
+              <img src="ipv6.jpg" loading="lazy" alt="IPv6 EIGRP" class="project-img">
+            </div>
+            <div class="project-head">
+              <h4 class="card-title mb-0">IPv6 Routing with EIGRP</h4>
+            </div>
+            <p class="card-text">A next-generation addressing lab migrating an enterprise topology to IPv6, with EIGRP handling dynamic route exchange across the new address space:</p>
+            <ul>
+              <li>IPv6 unicast routing enabled</li>
+              <li>EIGRP for IPv6 (AS 10)</li>
+              <li>Global Unicast & Link-Local addressing</li>
+              <li>Neighbor relationship establishment</li>
+              <li>Routing convergence verification</li>
+            </ul>
+            <div class="tools-badge"><i class="bi bi-tools"></i> Cisco Packet Tracer</div>
+            <div class="mt-3">
+              <a href="./ipv6.pkt" download="IPv6_EIGRP_Project.pkt" class="btn-primary-custom" style="text-decoration:none;">
+                <i class="bi bi-download"></i> Packet Tracer File
+              </a>
+            </div>
           </div>
-
-          <div>
-            <h3 class="card-title mb-0">IPv6 Routing with EIGRP</h3>
-          </div>
-
-         <p class="card-text">
-  Built an IPv6 network using EIGRP for dynamic
-  routing and connectivity between multiple
-  network segments.
-</p>
-
-          <ul>
-            <li>IPv6 unicast routing enabled</li>
-            <li>EIGRP for IPv6 (AS 10)</li>
-            <li>Global Unicast &amp; Link-Local addressing</li>
-            <li>Neighbor relationship establishment</li>
-            <li>Routing convergence verification</li>
-          </ul>
-
-          <div class="tools-badge">
-            <i class="bi bi-tools"></i>
-            Cisco Packet Tracer
-          </div>
-
-          <div class="mt-3">
-            <a href="./ipv6.pkt"
-               download="IPv6_EIGRP_Project.pkt"
-               class="btn-primary-custom">
-              <i class="bi bi-download"></i>
-              Packet Tracer File
-            </a>
-          </div>
-
         </div>
-      </div>
 
-      <!-- VoIP: Cisco 2811 + IP Phone 7960 -->
-      <div class="col-lg-6 project-card-wrap" data-category="services">
-        <div class="card p-4 animate-on-scroll project-card">
-
-          <div class="mb-4">
-            <a href="voip.jpg" target="_blank" rel="noopener" class="project-img-link" title="Open full size">
-            <img src="voip.jpg" loading="lazy"
-                 alt="Cisco IP Phone 7960 connected to a Cisco 2811 router in Packet Tracer"
-                 class="project-img">
-          </a>
+        <!-- Project 5 -->
+        <div class="col-lg-6 project-card-wrap" data-category="services">
+          <div class="card p-4 animate-on-scroll project-card">
+            <div class="img-wrap mb-4">
+              <img src="voip.jpg" loading="lazy" alt="VoIP CME" class="project-img">
+            </div>
+            <div class="project-head">
+              <h4 class="card-title mb-0">VoIP Network Implementation</h4>
+            </div>
+            <p class="card-text">A converged voice and data network built around Cisco Call Manager Express, with dedicated voice VLANs and SIP integration for end-to-end call signaling:</p>
+            <ul>
+              <li>IP Phones via SCCP protocol</li>
+              <li>CME on Cisco router</li>
+              <li>Separate VLANs for Voice & Data</li>
+              <li>DHCP with Option 150</li>
+              <li>FreePBX + SIP configuration</li>
+            </ul>
+            <div class="tools-badge"><i class="bi bi-tools"></i> Cisco Packet Tracer / FreePBX</div>
+            <div class="mt-3">
+              <a href="./voip.pkt" download="VoIP_Project.pkt" class="btn-primary-custom" style="text-decoration:none;">
+                <i class="bi bi-download"></i> Packet Tracer File
+              </a>
+            </div>
           </div>
-
-          <div>
-            <h3 class="card-title mb-0">
-              VoIP Network Implementation
-            </h3>
-          </div>
-
-        <p class="card-text">
-  Configured a Cisco 2811 router and Cisco
-  IP Phone 7960 in Packet Tracer, implementing
-  basic IP telephony services and testing
-  phone connectivity.
-</p>
-
-          <ul>
-            <li>Cisco IP Phone 7960 connectivity</li>
-            <li>Cisco 2811 router configuration</li>
-            <li>Basic IP telephony setup</li>
-            <li>VoIP lab testing and troubleshooting</li>
-          </ul>
-
-          <div class="tools-badge">
-            <i class="bi bi-tools"></i>
-            Cisco Packet Tracer
-          </div>
-
-          <div class="mt-3">
-            <a href="./voip.pkt"
-               download="VoIP_Project.pkt"
-               class="btn-primary-custom">
-              <i class="bi bi-download"></i>
-              Packet Tracer File
-            </a>
-          </div>
-
         </div>
-      </div>
 
-      <!-- AAA + Controller -->
-      <div class="col-lg-6 project-card-wrap" data-category="security">
-        <div class="card p-4 animate-on-scroll project-card">
-
-          <div class="mb-4">
-            <a href="aaa.jpg" target="_blank" rel="noopener" class="project-img-link" title="Open full size">
-            <img src="aaa.jpg" loading="lazy"
-                 alt="Multi-network enterprise topology with AAA and controller in Packet Tracer"
-                 class="project-img">
-          </a>
+        <!-- Project 6-->
+        <div class="col-lg-6 project-card-wrap" data-category="security">
+          <div class="card p-4 animate-on-scroll project-card">
+            <div class="img-wrap mb-4">
+              <img src="aaa.jpg" loading="lazy" alt="AAA Controller" class="project-img">
+            </div>
+            <div class="project-head">
+              <h4 class="card-title mb-0">Multi-Network Enterprise (AAA + Controller)</h4>
+            </div>
+            <p class="card-text">A two-network enterprise design centered on centralized authentication — separating production access control from a dedicated, isolated management infrastructure:</p>
+            <ul>
+              <li><strong style="color:var(--accent);">Network 1:</strong> AAA Security Services</li>
+              <li>TACACS+ and RADIUS authentication</li>
+              <li>Device access control policies</li>
+              <li>Secure login validation</li>
+              <li><strong style="color:var(--accent);">Network 2:</strong> Controller / Management</li>
+              <li>Dedicated management infrastructure</li>
+              <li>Isolated from production environment</li>
+            </ul>
+            <div class="tools-badge"><i class="bi bi-tools"></i> Cisco Packet Tracer</div>
+            <div class="mt-3">
+              <a href="./aaa.pkt" download="Multi_Network_Project.pkt" class="btn-primary-custom" style="text-decoration:none;">
+                <i class="bi bi-download"></i> Packet Tracer File
+              </a>
+            </div>
           </div>
-
-          <div>
-            <h3 class="card-title mb-0">
-              Multi-Network Enterprise (AAA + Controller)
-            </h3>
-          </div>
-
-         <p class="card-text">
-  Centralized TACACS+ and RADIUS authentication,
-  with a separate management network isolated
-  from production.
-</p>
-         <ul>
-  <li>TACACS+ and RADIUS authentication</li>
-  <li>Centralized device access control</li>
-  <li>Secure login testing</li>
-  <li>Separate management network</li>
-</ul>
-
-          <div class="tools-badge">
-            <i class="bi bi-tools"></i>
-            Cisco Packet Tracer
-          </div>
-
-          <div class="mt-3">
-            <a href="./aaa.pkt"
-               download="Multi_Network_Project.pkt"
-               class="btn-primary-custom">
-              <i class="bi bi-download"></i>
-              Packet Tracer File
-            </a>
-          </div>
-
         </div>
-      </div>
 
-      <!-- Cisco ASA Firewall with DMZ -->
-      <div class="col-lg-6 project-card-wrap" data-category="security">
-        <div class="card p-4 animate-on-scroll project-card">
-
-          <div class="mb-4">
-            <a href="firewall.jpg" target="_blank" rel="noopener" class="project-img-link" title="Open full size">
-            <img src="firewall.jpg" loading="lazy"
-                 alt="Cisco ASA firewall with DMZ topology in Packet Tracer"
-                 class="project-img">
-          </a>
+        <!-- Project  -->
+        <div class="col-lg-6 project-card-wrap" data-category="security">
+          <div class="card p-4 animate-on-scroll project-card">
+            <div class="img-wrap mb-4">
+              <img src="firewall.jpg" loading="lazy" alt="Cisco ASA Firewall" class="project-img">
+            </div>
+            <div class="project-head">
+              <h4 class="card-title mb-0">Cisco ASA Firewall with DMZ</h4>
+            </div>
+            <p class="card-text">A secure perimeter architecture built around a Cisco ASA, segmenting the network into Inside, Outside, and DMZ zones to expose public services without compromising internal hosts:</p>
+            <ul>
+              <li>ASA interfaces — Inside / Outside / DMZ</li>
+              <li>Security levels & zone-based policies</li>
+              <li>NAT rules for DMZ server access</li>
+              <li>ACLs for inter-zone traffic filtering</li>
+              <li>Connectivity & security restriction tests</li>
+            </ul>
+            <div class="tools-badge"><i class="bi bi-tools"></i> Cisco Packet Tracer</div>
+            <div class="mt-3">
+              <a href="./firewall.pkt" download="Cisco_Firewall_DMZ_Project.pkt" class="btn-primary-custom" style="text-decoration:none;">
+                <i class="bi bi-download"></i> Packet Tracer File
+              </a>
+            </div>
           </div>
-
-          <div>
-            <h3 class="card-title mb-0">
-              Cisco ASA Firewall with DMZ
-            </h3>
-          </div>
-
-          <p class="card-text">
-            A secure perimeter architecture built around a Cisco ASA, segmenting the network into Inside, Outside, and DMZ zones to expose public services without compromising internal hosts:
-          </p>
-
-          <ul>
-            <li>ASA interfaces — Inside / Outside / DMZ</li>
-           <li>Security levels &amp; interface-based access policies</li>
-            <li>NAT rules for DMZ server access</li>
-            <li>ACLs for inter-zone traffic filtering</li>
-            <li>Connectivity &amp; security restriction tests</li>
-          </ul>
-
-          <div class="tools-badge">
-            <i class="bi bi-tools"></i>
-            Cisco Packet Tracer
-          </div>
-
-          <div class="mt-3">
-            <a href="./firewall.pkt"
-               download="Cisco_Firewall_DMZ_Project.pkt"
-               class="btn-primary-custom">
-              <i class="bi bi-download"></i>
-              Packet Tracer File
-            </a>
-          </div>
-
         </div>
-      </div>
 
-      <!-- Python Network Automation -->
-      <div class="col-lg-6 project-card-wrap" data-category="automation">
-        <div class="card p-4 animate-on-scroll project-card">
-
-          <div class="mb-3">
-            <a href="auto.png" target="_blank" rel="noopener" class="project-img-link" title="Open full size">
-            <img src="auto.png" loading="lazy"
-                 alt="Python network automation in GNS3"
-                 class="project-img">
-          </a>
+        <!-- Project 8 -->
+        <div class="col-lg-6 project-card-wrap" data-category="automation">
+          <div class="card p-4 animate-on-scroll project-card">
+            <div class="img-wrap mb-3">
+              <img src="auto.png" loading="lazy" alt="Python Network Automation" class="project-img">
+            </div>
+            <img src="auto2.png" loading="lazy" alt="Python Network Automation Script" class="project-img mb-4">
+            <div class="project-head">
+              <h4 class="card-title mb-0">Python Scripting in GNS3 Lab Environment</h4>
+            </div>
+            <p class="card-text">A network automation lab combining GNS3 with virtual machines, using Python to programmatically connect to Cisco devices over Telnet and drive configuration tasks without manual CLI work:</p>
+            <ul>
+              <li>Scripted device login and command execution</li>
+              <li>Executed Cisco IOS commands remotely</li>
+              <li>Collected device information automatically</li>
+              <li>Integrated secure credential handling</li>
+              <li>Used Netmiko & Telnetlib for VLAN, OSPF, and config backup tasks</li>
+            </ul>
+            <div class="tools-badge"><i class="bi bi-tools"></i> Python · Telnet · GNS3</div>
+             <a href="./codes.pdf" download="codes.pdf" class="btn-outline-custom">
+                     <i class="bi bi-file-earmark-pdf"></i> View Automation Scripts
+             </a>
           </div>
-
-          <a href="auto2.png" target="_blank" rel="noopener" class="project-img-link" title="Open full size">
-            <img src="auto2.png" loading="lazy"
-                 alt="Python network automation script"
-                 class="project-img mb-4">
-          </a>
-
-          <div>
-            <h3 class="card-title mb-0">
-              Python Scripting in GNS3 Lab Environment
-            </h3>
-          </div>
-
-       <p class="card-text">
-  Automated Cisco device administration in GNS3
-  using Python scripts for remote command
-  execution, device information collection
-  and configuration backups.
-</p>
-
-          <ul>
-            <li>Scripted device login and command execution</li>
-            <li>Executed Cisco IOS commands remotely</li>
-            <li>Collected device information automatically</li>
-            <li>Used Netmiko &amp; Telnetlib for VLAN, OSPF, and config backup tasks</li>
-          </ul>
-
-          <div class="tools-badge">
-            <i class="bi bi-tools"></i>
-            Python · Telnet · GNS3
-          </div>
-
-          <div class="mt-3">
-            <a href="./codes.docx"
-               download="codes.docx"
-               class="btn-outline-custom">
-              <i class="bi bi-file-earmark-word"></i>
-              View Automation Scripts
-            </a>
-          </div>
-
         </div>
-      </div>
+      
 
     </div>
   </div>
 </section>
-
 
 
 
@@ -1895,7 +1748,7 @@ section {
         <div class="lab-card animate-on-scroll">
 
           <img src="rack2.jpg"
-               loading="lazy"
+               loading="lazy" decoding="async"
                alt="Cisco Switches and Routers Lab">
 
           <div class="lab-card-body">
@@ -1920,7 +1773,7 @@ section {
         <div class="lab-card animate-on-scroll">
 
           <img src="ipphone.jpg"
-               loading="lazy"
+               loading="lazy" decoding="async"
                alt="Cisco IP Phone 7942G">
 
           <div class="lab-card-body">
@@ -1944,7 +1797,7 @@ section {
         <div class="lab-card animate-on-scroll">
 
           <img src="rack.jpg"
-               loading="lazy"
+               loading="lazy" decoding="async"
                alt="Network Rack">
 
           <div class="lab-card-body">
@@ -1956,6 +1809,8 @@ section {
               <li>Cisco router</li>
               <li>FortiGate firewall</li>
               <li>Structured cabling environment</li>
+              <li>Patch panel</li>
+              <li>switch cisco layer 2 </li>
             </ul>
           </div>
 
@@ -1968,7 +1823,7 @@ section {
         <div class="lab-card animate-on-scroll">
 
           <img src="fiber.jpg"
-               loading="lazy"
+               loading="lazy" decoding="async"
                alt="Fiber Optic Fusion Splicing Machine">
 
           <div class="lab-card-body">
@@ -1976,7 +1831,7 @@ section {
               Fiber Optic Fusion Splicing
             </h3>
 
-            <ul style="color:var(--text);font-size:1.05rem;line-height:1.8;padding-left:1.25rem;">
+            <ul style="color:var(--text);font-size:1.05rem;line-height:1.8;padding-left:1.25rem;margin-bottom:0;">
               <li>Fiber preparation and precision cleaving</li>
               <li>Core alignment and fusion splicing</li>
               <li>Splice protection</li>
@@ -1992,11 +1847,8 @@ section {
         <div class="lab-card animate-on-scroll">
 
           <img src="fiber2.jpg"
-               loading="lazy"
-               alt="HENGTONG Egypt Fiber Optic Factory Training Certificate"
-               style="object-fit:contain;
-                      object-position:center;
-                      background:var(--bg-card);">
+               loading="lazy" decoding="async"
+               alt="HENGTONG Egypt Fiber Optic Factory Training Certificate">
 
           <div class="lab-card-body">
 
@@ -2053,7 +1905,7 @@ section {
               <label class="form-label" for="c-name">Full Name</label>
               <div class="input-group">
                 <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
-                <input type="text" id="c-name" name="name" autocomplete="name" class="form-control" placeholder="Enter your name">
+                <input type="text" id="c-name" name="name" autocomplete="name" maxlength="100" class="form-control" placeholder="Enter your name">
               </div>
             </div>
 
@@ -2061,7 +1913,7 @@ section {
               <label class="form-label" for="c-email">Email Address</label>
               <div class="input-group">
                 <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
-                <input type="email" id="c-email" name="email" autocomplete="email" class="form-control" placeholder="Enter your email">
+                <input type="email" id="c-email" name="email" autocomplete="email" maxlength="254" class="form-control" placeholder="Enter your email">
               </div>
             </div>
 
@@ -2071,7 +1923,7 @@ section {
                 <span class="input-group-text" style="align-items:flex-start;padding-top:10px;">
                   <i class="bi bi-chat-dots-fill"></i>
                 </span>
-                <textarea id="c-message" name="message" rows="5" class="form-control" placeholder="Write your message..."></textarea>
+                <textarea id="c-message" name="message" rows="5" maxlength="2000" class="form-control" placeholder="Write your message..."></textarea>
               </div>
             </div>
 
@@ -2090,11 +1942,11 @@ section {
           </form>
 
           <!-- Success State -->
-          <div id="contactSuccessMessage" class="text-center py-5" style="display:none;">
+          <div id="contactSuccessMessage" class="text-center py-5" style="display:none;" role="status" tabindex="-1">
             <div style="font-size:3rem;margin-bottom:1rem;">✅</div>
             <h3 style="color:var(--accent);font-family:var(--font-display);">Message Sent!</h3>
             <p style="color:var(--text-muted);">Thanks for reaching out. I will reply as soon as possible.</p>
-            <button type="button" class="btn-outline-custom mt-2" onclick="resetContactForm()">
+            <button type="button" class="btn-outline-custom mt-2" id="contactResetBtn">
               Send Another Message
             </button>
           </div>
@@ -2121,7 +1973,7 @@ section {
 
           <a href="https://wa.me/201099863067?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%0A%D8%A3%D9%86%D8%A7%20%D8%A8%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%D9%83%20%D9%85%D9%86%20%D8%AE%D9%84%D8%A7%D9%84%20%D8%A7%D9%84%D9%80%20portfolio"
              target="_blank"
-             rel="noopener"
+             rel="noopener noreferrer"
              class="contact-link">
             <div class="icon-wrap" style="background:#25d366;">
               <i class="bi bi-whatsapp" style="color:#fff;"></i>
@@ -2132,7 +1984,7 @@ section {
             </div>
           </a>
 
-          <a href="https://www.linkedin.com/in/sherif-rajeh" target="_blank" rel="noopener" class="contact-link">
+          <a href="https://www.linkedin.com/in/sherif-rajeh" target="_blank" rel="noopener noreferrer" class="contact-link">
             <div class="icon-wrap" style="background:#0077b5;">
               <i class="bi bi-linkedin" style="color:#fff;"></i>
             </div>
@@ -2158,6 +2010,8 @@ section {
   </div>
 </section>
 
+</main>
+
   <!-- ===================== FOOTER ===================== -->
 <footer>
   <div class="container text-center">
@@ -2175,218 +2029,227 @@ section {
 
 
   <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
 
   <script>
-  
-
-    /* ===================== SCROLL ANIMATIONS ===================== */
-    (function() {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
-      document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
-    })();
-
-
-/* ===================== ACTIVE NAV ===================== */
 (function () {
-  const navLinks = document.querySelectorAll(
-    '.nav-link[data-section]'
-  );
+  'use strict';
 
+  /* ===================== SCROLL ANIMATIONS ===================== */
+  const animated = document.querySelectorAll('.animate-on-scroll');
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    animated.forEach((el) => observer.observe(el));
+  } else {
+    animated.forEach((el) => el.classList.add('visible'));
+  }
+
+  /* ===================== SCROLL HANDLER (one listener) =====================
+     Updates: navbar shadow, back-to-top button, active nav link          */
+  const nav      = document.getElementById('mainNav');
+  const backBtn  = document.getElementById('backToTop');
+  const navLinks = document.querySelectorAll('.nav-link[data-section]');
   const sections = document.querySelectorAll('section[id]');
+  const NAV_OFFSET = 110;
+  let ticking = false;
 
+  function updateOnScroll() {
+    ticking = false;
+    const y = window.scrollY;
 
+    nav.classList.toggle('scrolled', y > 50);
+    backBtn.classList.toggle('visible', y > 400);
 
-  function updateActiveNav() {
-    const navOffset = 110;
-    let currentSection = '';
-
-    sections.forEach(section => {
-      const rect = section.getBoundingClientRect();
-
-      if (rect.top <= navOffset) {
-        currentSection = section.id;
-      }
+    let current = '';
+    sections.forEach((section) => {
+      if (section.getBoundingClientRect().top <= NAV_OFFSET) current = section.id;
     });
 
-    // Keep the final section active at the bottom of the page
-    if (
-      window.innerHeight + window.scrollY >=
-      document.documentElement.scrollHeight - 5
-    ) {
-      const lastSection = sections[sections.length - 1];
-      if (lastSection) currentSection = lastSection.id;
+    // Keep the last section active when the bottom of the page is reached
+    if (sections.length &&
+        window.innerHeight + y >= document.documentElement.scrollHeight - 5) {
+      current = sections[sections.length - 1].id;
     }
 
-const activeSection = currentSection;
-
-    navLinks.forEach(link => {
-      const isActive =
-        link.dataset.section === activeSection;
-
+    navLinks.forEach((link) => {
+      const isActive = link.dataset.section === current;
       link.classList.toggle('active', isActive);
+      if (isActive) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
     });
   }
 
-  window.addEventListener('scroll', updateActiveNav, {
-    passive: true
-  });
+  function requestTick() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(updateOnScroll);
+    }
+  }
 
-  window.addEventListener('resize', updateActiveNav);
+  window.addEventListener('scroll', requestTick, { passive: true });
+  window.addEventListener('resize', requestTick);
+  window.addEventListener('load', updateOnScroll);
+  updateOnScroll();
 
-  window.addEventListener('load', updateActiveNav);
+  /* ===================== BACK TO TOP =====================
+     Smooth/instant behaviour comes from CSS (scroll-behavior + reduced-motion) */
+  backBtn.addEventListener('click', () => window.scrollTo({ top: 0 }));
 
-  updateActiveNav();
-})();
+  /* ===================== ANCHOR LINKS =====================
+     Native anchor scrolling is used (CSS handles smoothness and the navbar
+     offset via scroll-margin-top), so the URL hash updates and Back works.
+     JS only closes the mobile menu.                                      */
+  const collapseEl = document.getElementById('navmenu');
 
-
-    /* ===================== NAVBAR SCROLL ===================== */
-    (function() {
-      const nav = document.getElementById('mainNav');
-      window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50), { passive: true });
-    })();
-
-    /* ===================== PROJECT FILTER ===================== */
-    (function() {
-      const buttons = document.querySelectorAll('.filter-btn');
-      const cards = document.querySelectorAll('.project-card-wrap');
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          buttons.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          const filter = btn.dataset.filter;
-          cards.forEach(card => {
-            const categories = (card.dataset.category || '').split(' ');
-            const show = filter === 'all' || categories.includes(filter);
-            card.classList.toggle('filtered-out', !show);
-          });
-        });
-      });
-    })();
-
-    /* ===================== BACK TO TOP ===================== */
-    (function() {
-      const btn = document.getElementById('backToTop');
-      window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 400), { passive: true });
-      btn.addEventListener('click', () => {
-  const reduceMotion = window.matchMedia(
-    '(prefers-reduced-motion: reduce)'
-  ).matches;
-
-  window.scrollTo({
-    top: 0,
-    behavior: reduceMotion ? 'instant' : 'smooth'
-  });
-});
-    })();
-
-    /* ===================== SMOOTH SCROLL ===================== */
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener('click', function(e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          const reduceMotion = window.matchMedia(
-  '(prefers-reduced-motion: reduce)'
-).matches;
-
-target.scrollIntoView({
-  behavior: reduceMotion ? 'instant' : 'smooth'
-});
-          const collapse = document.getElementById('navmenu');
-          if (collapse.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(collapse).hide();
-        }
-      });
-    });
-
-    /* ===================== CONTACT FORM — FormSubmit ===================== */
-    async function submitContactForm() {
-      const name    = document.getElementById('c-name').value.trim();
-      const email   = document.getElementById('c-email').value.trim();
-      const message = document.getElementById('c-message').value.trim();
-      const errorEl = document.getElementById('contactErrorMsg');
-      const btn     = document.getElementById('contactSubmitBtn');
-
-      errorEl.style.display = 'none';
-
-   if (!name || !email || !message) {
-  errorEl.textContent = 'Please fill in all fields.';
-  errorEl.style.display = 'block';
-  return;
-}
-
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-if (!emailPattern.test(email)) {
-  errorEl.textContent = 'Please enter a valid email address.';
-  errorEl.style.display = 'block';
-  return;
-}
-
-if (message.length < 10) {
-  errorEl.textContent = 'Please enter a message of at least 10 characters.';
-  errorEl.style.display = 'block';
-  return;
-}
-
-      btn.classList.add('btn-loading');
-      btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
-
-      try {
-        const formData = new FormData();
-        formData.append('name', name);
-        formData.append('email', email);
-        formData.append('message', message);
-        formData.append('_subject', 'New Contact Message from Portfolio');
-        formData.append('_captcha', 'false');
-        formData.append('_honey', document.getElementById('c-honey').value);
-        formData.append('_template', 'table');
-
-        const res = await fetch('https://formsubmit.co/ajax/sherif.mohamed.rajeh@gmail.com', {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        });
-
-        const data = await res.json();
-
-        if (data.success === 'true' || data.success === true) {
-          document.getElementById('contactFormFields').style.display = 'none';
-          document.getElementById('contactSuccessMessage').style.display = 'block';
-          document.getElementById('c-name').value = '';
-          document.getElementById('c-email').value = '';
-          document.getElementById('c-message').value = '';
-        } else {
-          throw new Error('Failed');
-        }
-      } catch {
-        errorEl.textContent = 'Failed to send message. Please email me directly at sherif.mohamed.rajeh@gmail.com';
-        errorEl.style.display = 'block';
-        btn.classList.remove('btn-loading');
-        btn.innerHTML = '<i class="bi bi-send-fill"></i> Send Message';
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (collapseEl && collapseEl.classList.contains('show') && typeof bootstrap !== 'undefined') {
+        bootstrap.Collapse.getOrCreateInstance(collapseEl).hide();
       }
-    }
-
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      submitContactForm();
     });
+  });
 
-    function resetContactForm() {
-      document.getElementById('contactSuccessMessage').style.display = 'none';
-      document.getElementById('contactFormFields').style.display = 'block';
-      const btn = document.getElementById('contactSubmitBtn');
-      btn.classList.remove('btn-loading');
-      btn.innerHTML = '<i class="bi bi-send-fill"></i> Send Message';
+  /* ===================== PROJECT FILTER ===================== */
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projectCards  = document.querySelectorAll('.project-card-wrap');
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach((b) => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+
+      const filter = btn.dataset.filter;
+      projectCards.forEach((card) => {
+        const categories = (card.dataset.category || '').split(' ');
+        const show = filter === 'all' || categories.includes(filter);
+        card.classList.toggle('filtered-out', !show);
+      });
+    });
+  });
+
+  /* ===================== CONTACT FORM — FormSubmit ===================== */
+  const CONTACT_EMAIL = 'sherif.mohamed.rajeh@gmail.com';
+  const FORM_ENDPOINT = 'https://formsubmit.co/ajax/' + CONTACT_EMAIL;
+  const SUBMIT_HTML   = '<i class="bi bi-send-fill"></i> Send Message';
+  const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const form       = document.getElementById('contactForm');
+  const fieldsBox  = document.getElementById('contactFormFields');
+  const successBox = document.getElementById('contactSuccessMessage');
+  const errorEl    = document.getElementById('contactErrorMsg');
+  const submitBtn  = document.getElementById('contactSubmitBtn');
+  const resetBtn   = document.getElementById('contactResetBtn');
+  const nameInput  = document.getElementById('c-name');
+  const emailInput = document.getElementById('c-email');
+  const msgInput   = document.getElementById('c-message');
+  const honeyInput = document.getElementById('c-honey');
+  let sending = false;
+
+  function showError(message) {
+    errorEl.textContent = message;
+    errorEl.style.display = 'block';
+  }
+
+  function resetButton() {
+    submitBtn.classList.remove('btn-loading');
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = SUBMIT_HTML;
+  }
+
+  function showSuccess() {
+    fieldsBox.style.display = 'none';
+    successBox.style.display = 'block';
+    nameInput.value = '';
+    emailInput.value = '';
+    msgInput.value = '';
+    resetButton();
+    successBox.focus();
+  }
+
+  async function submitContactForm() {
+    if (sending) return;
+
+    const name    = nameInput.value.trim();
+    const email   = emailInput.value.trim();
+    const message = msgInput.value.trim();
+
+    errorEl.style.display = 'none';
+
+    if (!name || !email || !message) return showError('Please fill in all fields.');
+    if (!EMAIL_PATTERN.test(email))  return showError('Please enter a valid email address.');
+    if (message.length < 10)         return showError('Please enter a message of at least 10 characters.');
+
+    // Honeypot: bots fill the hidden field. Pretend success, send nothing.
+    if (honeyInput.value) return showSuccess();
+
+    sending = true;
+    submitBtn.classList.add('btn-loading');
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>Sending...';
+
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 15000);
+
+    try {
+      const formData = new FormData();
+      formData.append('name', name);
+      formData.append('email', email);
+      formData.append('message', message);
+      formData.append('_subject', 'New Contact Message from Portfolio');
+      formData.append('_captcha', 'false');
+      formData.append('_honey', '');
+      formData.append('_template', 'table');
+
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' },
+        signal: controller.signal
+      });
+
+      const data = await res.json();
+
+      if (data.success === 'true' || data.success === true) {
+        showSuccess();
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (err) {
+      showError('Failed to send message. Please email me directly at ' + CONTACT_EMAIL);
+      resetButton();
+    } finally {
+      clearTimeout(timer);
+      sending = false;
     }
-  </script>
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    submitContactForm();
+  });
+
+  resetBtn.addEventListener('click', () => {
+    successBox.style.display = 'none';
+    fieldsBox.style.display = 'block';
+    resetButton();
+    nameInput.focus();
+  });
+})();
+</script>
 
 </body>
 </html>
